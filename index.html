@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration form</title>
+</head>
+<style>
+body{
+    /* background-color: rgb(224, 108, 108); */
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('universe.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-container {
+    background-color: rgb(46, 55, 132) ;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 90%;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+h1{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(16, 4, 68);
+    font-size: 40px;  
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border-radius: 10px; 
+    color: rgb(135, 135, 219);
+    
+
+}
+input, select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  background-color: rgb(205, 205, 207);
+
+}
+
+label{
+    font-weight: bold;
+ }
+ 
+.genders{
+    display: flex;
+    gap:15px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  display: inline;
+  background-color: rgb(110, 87, 196);
+  border-radius:5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(32, 25, 132, 0.874);
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  input, select {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+
+.register{
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<body>
+
+    <div class="form-container">
+        <h1>Registraction Form</h1>
+      <form >
+        <label for="name"> Full Name</label>
+        <input type="text" id="name" name="username" required>
+
+        <label for="username">User Name</label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="password">
+
+        <label for="phone">Phone Number</label>
+        <input type="number" id="phone" name="phone">
+
+        <label for="dob">Date Of Birth</label>
+        <input type="dob" id="dob" name="date">
+
+        <label>Gender</label>
+        <div class="genders">
+          <label><input type="radio" name="gender" value="male">male</label>
+          <label><input type="radio" name="gender" value="female">female</label>
+        </div>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">select</option>
+          <option value="india">India</option>
+          <option value="usa">Usa</option>
+          <option value="canada">Canada</option>
+          <option value="italy">Italy</option>
+          <option value="spanish">Spanish</option>
+        </select><br>
+     
+        <input class="register" type="submit" value="register">
+      </form>
+    </div>
+</body>
+</html>
